@@ -277,5 +277,5 @@ $(function() {
     }
   });
 
-  showDirectory("/fapi");
+  showDirectory("http://themis-dev.herokuapp.com/fapi");
 });
