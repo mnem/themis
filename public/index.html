@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hermes DO IT LIVE!</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="css/editor.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <div id="file-buttons">
+            <div class="btn-group">
+              <a id="action-save" class="btn disabled" href="#">Save</a>
+              <a id="action-new" class="btn" data-toggle="modal" href="#new-file-dialog" href="#">New</a>
+            </div>
+            <div class="btn-group">
+              <a id="action-revert" class="btn btn-danger disabled" href="#">Revert</a>
+            </div>
+          </div>
+          <p id="label-active-file-location" class="navbar-text label label-inverse">Editing <a id="active-file-location" href="#"></a></p>
+          <p class="navbar-text pull-right">Hermes DO IT LIVE!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <div class="well">
+            <ul class="nav nav-list">
+              <li class="nav-header">Plugins</li>
+            </ul>
+            <ul id="files" class="nav nav-list">
+            </ul>
+          </div>
+        </div>
+        <div class="span9">
+          <div id="editor"></div>
+        </div>
+      </div>
+    </div> <!-- /container -->
+
+    <!-- New file modal -->
+    <div class="modal fade" id="new-file-dialog">
+      <div class="modal-header">
+        <button class="close" data-dismiss="modal">×</button>
+        <h3>New plugin</h3>
+      </div>
+      <div class="modal-body">
+        <input id="new-plugin-name" type="text" class="span3" placeholder="plugin name">.plugin.coffee
+        <div id='alert-invalid-plugin-name' class="alert alert-error">
+          <strong>Invalid name!</strong> Letters, numbers, dashes and underscores only please. No spaces, periods or other fancy shizz.
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn" data-dismiss="modal">Cancel</a>
+        <a id="create-new-plugin" href="#" class="btn btn-primary">Create</a>
+      </div>
+    </div>
+    <!-- End new file modal -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/mustache.min.js"></script>
+    <script src="js/ace/ace-uncompressed-noconflict.js"></script>
+    <script src="js/plugin.template.js"></script>
+    <script src="js/editor.js"></script>
+    <script src="js/bootstrap-transition.js"></script>
+    <script src="js/bootstrap-alert.js"></script>
+    <script src="js/bootstrap-modal.js"></script>
+    <script src="js/bootstrap-dropdown.js"></script>
+    <script src="js/bootstrap-scrollspy.js"></script>
+    <script src="js/bootstrap-tab.js"></script>
+    <script src="js/bootstrap-tooltip.js"></script>
+    <script src="js/bootstrap-popover.js"></script>
+    <script src="js/bootstrap-button.js"></script>
+    <script src="js/bootstrap-collapse.js"></script>
+    <script src="js/bootstrap-carousel.js"></script>
+    <script src="js/bootstrap-typeahead.js"></script>
+  </body>
+</html>
