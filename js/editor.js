@@ -191,7 +191,11 @@ function _appendFileItems(items, icon, click) {
 // Shows the specified directory in the
 // file listing
 function showDirectory(location) {
-  $.getJSON(location, function(data, textStatus, jqXHR) {
+  $.ajax({
+  url: location,
+  dataType: 'json',
+  error: function(jqXHR, textStatus, errorThrown) { console.error('Call went bad0r', textStatus, errorThrown, jqXHR)},
+  success: function(data, textStatus, jqXHR) {
     setActiveDir(data.current);
     if(FAPI_ENDPOINT == null) {
       FAPI_ENDPOINT = data.current;
@@ -228,7 +232,7 @@ function showDirectory(location) {
 
     _appendFileItems(dirs, 'icon-folder-close', showDirectory);
     _appendFileItems(files, 'icon-file', showFile);
-  });
+  }});
 }
 
 ////////////////////////////////////////
