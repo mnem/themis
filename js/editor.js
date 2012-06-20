@@ -281,5 +281,5 @@ $(function() {
     }
   });
 
-  showDirectory("http://themis-dev.herokuapp.com/fapi");
+  showDirectory("http://themis-dev.herokuapp.com/fapi/");
 });
